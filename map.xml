@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<map proto="1.4.2">
+<name>Portals</name>
+<version>1.0.0</version>
+<objective>Be the team with the most kills after 10 minutes!</objective>
+<authors>
+    <author uuid="0fdf1faa-6a98-4f27-983c-968648e12720"/>
+    <!-- AMSGamingTQ -->
+</authors>
+<gamemode>tdm</gamemode>
+<gamemode>rage</gamemode>
+<broadcasts>
+    <tip after="0s" every="1m">There is a Speed Boost pick up in the Arena room!</tip>
+</broadcasts>
+<teams>
+    <team id="red" color="dark red" max="10" show-name-tags="false">Red</team>
+    <team id="blue" color="blue" max="10" show-name-tags="false">Blue</team>
+</teams>
+<kits>
+    <kit id="spawn">
+        <item slot="0" material="iron sword"/>
+            <enchantment level="2">sharpness</enchantment>
+        <item slot="1" material="bow"/>
+            <enchantment level="2">power</enchantment>
+        <item slot="5" material="arrow" amount="2"/>
+        <potion duration="3" amplifier="100">heal</potion>
+        <potion duration="3" amplifier="100">resistance</potion>
+    </kit>
+    <kit id="red-kit" parents="spawn">
+        <item slot="8" material="ink sack" damage="2" name="You are on Red team" locked="true"/>
+        <helmet material="leather helmet" color="993333" locked="true" unbreakable="true"/>
+        <chestplate material="leather chestplate" color="993333" locked="true" unbreakable="true"/>
+        <leggings material="leather leggings" color="993333" locked="true" unbreakable="true"/>
+        <boots material="leather boots" color="993333" locked="true" unbreakable="true"/>
+    </kit>
+    <kit id="blue-kit" parents="spawn">
+        <item slot="8" material="ink sack" damage="4" name="You are on Blue team" locked="true" unbreakable="true"/>
+        <helmet material="leather helmet" color="334CB2" locked="true" unbreakable="true"/>
+        <chestplate material="leather chestplate" color="334CB2" locked="true" unbreakable="true"/>
+        <leggings material="leather leggings" color="334CB2" locked="true" unbreakable="true"/>
+        <boots material="leather boots" color="334CB2" locked="true" unbreakable="true"/>
+    </kit>
+    <kit id="speed-boost">
+        <potion duration="15" amplifier="2">speed</potion>
+    </kit>
+</kits>
+<spawns>
+    <default>
+        <regions yaw="90">
+            <point>0,12,0</point>
+        </regions>
+    </default>
+    <spawn team="red" kit="red" spread="true">
+        <point yaw="180">0,17,-28</point>
+        <point yaw="180">0,9,-64</point>
+        <point yaw="-90">-5,22,-59</point>
+        <point yaw="0">-29,9,-82</point>
+        <point yaw="90">5,15,-100</point>
+    </spawn>
+    <spawn team="blue" kit="blue" spread="true">
+        <point yaw="0">0,17,27</point>
+        <point yaw="0">0,9,63</point>
+        <point yaw="90">5,22,58</point>
+        <point yaw="180">29,9,81</point>
+        <point yaw="-90">-5,15,99</point>
+    </spawn>
+</spawns>
+<portals>
+    <!--portals for the red side-->
+    <portal x="@0" y="@7" z="@0" yaw="0">
+        <region><cuboid min="-1,15,-111" max="1,17,-111"/></region>
+    </portal>
+    <portal y="4" z="-8" bidirectional="true">
+        <region><cuboid min="-1,9,-11" max="1,11,-11"/></region>
+    </portal>
+    <portal y="2" z="-16" bidirectional="true">
+        <region><cuboid min="-1,7,-37" max="1,9,-37"/></region>
+    </portal>
+    <portal x="-15" z="-13" bidirectional="true">
+        <region><cuboid min="-11,9,-63" max="-11,11,-65"/></region>
+    </portal>
+    <portal x="16" y="-2" z="-22" bidirectional="true">
+        <region><cuboid min="-25,15,-84" max="-25,17,-82"/></region>
+    </portal>
+    <portal y="5" z="-18" bidirectional="true">
+        <region><cuboid min="-1,17,-36" max="1,19,-36"/></region>
+    </portal>
+    <portal y="-4" z="-21" bidirectional="true"> 0 24 -72
+        <region><cuboid min="-1,25,-72" max="1,27,-72"/></region>
+    </portal>
+    <portal y="6" z="-21" bidirectional="true">
+        <region><cuboid min="-1,9,-73" max="1,11,-73"/></region>
+    </portal>
+    <!--portals for the blue side-->
+    <portal x="@0" y="@7" z="@0" yaw="180">
+        <region><cuboid min="1,15,110" max="-1,17,110"/></region>
+    </portal>
+    <portal y="4" z="7" bidirectional="true">
+        <region><cuboid min="1,9,11" max="-1,11,11"/></region>
+    </portal>
+    <portal y="2" z="16" bidirectional="true">
+        <region><cuboid min="1,7,36" max="-1,9,36"/></region>
+    </portal>
+    <portal x="15" z="13" bidirectional="true">
+        <region><cuboid min="11,9,62" max="11,11,64"/></region>
+    </portal>
+    <portal x="-16" y="-2" z="22" bidirectional="true">
+        <region><cuboid min="25,15,83" max="25,17,81"/></region>
+    </portal>
+    <portal y="5" z="18" bidirectional="true">
+        <region><cuboid min="1,17,35" max="-1,19,35"/></region>
+    </portal>
+    <portal y="-4" z="21" bidirectional="true">
+        <region><cuboid min="1,25,71" max="-1,27,71"/></region>
+    </portal>
+    <portal y="6" z="21" bidirectional="true">
+        <region><cuboid min="1,9,72" max="-1,11,72"/></region>
+    </portal>
+</portals>
+<rage/>
+<time>10m</time>
+<score>
+    <kills>1</kills>
+    <deaths>1</deaths>
+</score>
+<regions>
+    <apply block="never" region="everywhere"/>
+</regions>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
+<gamerules>
+    <doDaylightCycle>false</doDaylightCycle>
+</gamerules>
+<pickups>
+    <pickup name="Speed Boost" kit="speed-boost" refresh="30s">
+        <region>
+            <point>0,12,0</point>
+        </region>
+    </pickup>
+</pickups>
+<itemremove>
+    <item>iron sword</item>
+    <item>bow</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>red dye</item>
+    <item>lapis lazuli</item>
+</itemremove>
+<kill-rewards>
+    <kill-reward>
+        <item material="arrow" amount="1"/>
+    </kill-reward>
+</kill-rewards>
+</map>
